@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-}
+} 
 
 html {
     background-color: #000;
@@ -410,3 +410,42 @@ html {
 .borde:hover {
     opacity: 1;
 }
+
+@media screen and (max-width: 1025px) {
+    .navBar{
+        flex-wrap: wrap;
+    }
+    .enlaceCocteles{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media screen and (max-width: 767px){
+    .bannerBebidas {
+        background-size: 65vw 55vh;
+        width: 300px;
+        height: 200px;
+    }
+    .header h1 {
+        font-size: 40px;  
+    }
+    .navBar a {
+        font-size: 20px;  
+    }
+    .enlaceCocteles a{
+        font-size: 20px;
+    }
+
+}
+@media screen and (max-width:327px){
+    .bannerBebidas {
+        background-size: 65vw 55vh;
+        width: 260px;
+        height: 160px;
+    }
+
+}
+

@@ -137,6 +137,8 @@ nav a:active {
 }
 
 .receta {
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     border: solid bisque ;
 	background-color: black;
@@ -154,11 +156,7 @@ nav a:active {
     color: #dff2b0;
 }
 .card{
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 0px;
-    margin: 20px;
+    margin-top: 20px;
     
 }
 .card-body{
@@ -203,7 +201,7 @@ nav a:active {
 
 
 
-/* Media querys */
+/* Media screens */
 @media screen and (max-width: 1025px) {
 	.contenedor {
 		padding: 20px;
@@ -229,8 +227,6 @@ nav a:active {
 		grid-template-columns: repeat(2, 1fr);
         margin-right: 10px;
     }
-
-
 }
 @media screen and (max-width: 426px) {
     .contenedor {
@@ -265,6 +261,18 @@ nav a:active {
 		grid-template-columns: repeat(1, 1fr);
         margin-right: 10px;
 	}
+    .title{
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    .title h2 {
+        font-size: 30px;
+        margin-right: 5px;
+    }
+    .title h4 {
+        font-size: 20px;
+        margin-left: 5px;
+    }
     
 
 }

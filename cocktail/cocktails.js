@@ -64,7 +64,7 @@ function appWeb (array) {
         receta.innerHTML = ""
         let drink = drinks.find((p)=>p.idDrink == e.target.id)
         receta.innerHTML = `
-            <span id='close' class="close">&times;</span>
+        <span id='close' class="close">&times;</span>
             <div class="card mb-3">
                 <div class="card-body">
                     <div class='modal-image'>

@@ -10,31 +10,7 @@ html {
     color: #dff2b0;
 }
 
-.gridHeader {
-    grid-area: gridHeader;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-        "header header header header"
-        "navBar navBar navBar navBar";
-    grid-template-rows: 2fr .3fr;
-}
-
-#header {
-    grid-area: header;
-    font-size: 30px;
-    width: 100%;
-    padding: 0 50%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#header h1 {
+#cabeceraPagina h1 {
     font-family: 'Lobster', cursive;
     cursor: pointer;
     opacity: 1;
@@ -44,7 +20,6 @@ html {
 }
 
 .navBar {
-    grid-area: navBar;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -333,6 +308,10 @@ html {
         width: 100%;
         align-content:center;
     }
+    .navBar a {
+       font-size: 25px;
+    }
+    
     #aboutUs {
         margin: 20px;
         width: 90%;
@@ -370,6 +349,7 @@ html {
 
 }
 @media screen and (max-width:377px){
+ 
     .form-map{
         display: flex;
         flex-direction:column;
@@ -401,6 +381,9 @@ html {
 }
 
 @media screen and (max-width:327px){
+    .navBar a {
+        font-size: 20px;
+     }
     #aboutUs {
         margin: 20px;
     }
@@ -409,18 +392,19 @@ html {
         flex-direction:column;
         justify-content: space-between;
         align-items: center;
-        width: 330px;
+        width: 310px;
         margin: 0px;
+        margin-right: 10px;
     }
     #contact {
         margin: 20px;
         padding: 0px;
-        width:300px;
+        width:290px;
     }
     #ubication {
         margin: 20px;
         padding: 0px;
-        width:300px;
+        width:290px;
     }
     .mapa {
         margin-top: 15px;
@@ -430,6 +414,6 @@ html {
     }
     
     .mapa iframe {
-        width:300px;
+        width:290px;
     }
 }

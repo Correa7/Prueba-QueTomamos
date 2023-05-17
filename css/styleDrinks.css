@@ -476,12 +476,22 @@ html {
         display: none;
     }
 }
+
 @media screen and (max-width:327px){
     .bannerBebidas {
-        background-size: 65vw 55vh;
-        width: 260px;
-        height: 160px;
+        background-image: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+       
     }
+    #imagenBebidas{
+        width: 350px;
+        height: 300px;
+    }
+        
+    
 
 }
 

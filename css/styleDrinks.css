@@ -482,9 +482,7 @@ html {
         background-image: none;
         display: flex;
         justify-content: center;
-        align-items: center;
-       
-       
+        align-items: center;  
     }
     #imagenBebidas{
         width: 350px;

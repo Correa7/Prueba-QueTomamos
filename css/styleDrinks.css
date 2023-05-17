@@ -460,11 +460,6 @@ html {
   .gridFooter .social img {
     margin: 0 10px;
   }
-
-  .autoria,
-  .copyright {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 376px) {

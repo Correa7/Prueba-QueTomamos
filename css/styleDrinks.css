@@ -1,495 +1,483 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
-} 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
 
 html {
-    background-color: #000;
-    color: #dff2b0;
-    scroll-behavior: smooth;
+  background-color: #000;
+  color: #dff2b0;
+  scroll-behavior: smooth;
 }
 
 .gridContainer {
-    display: grid;
-    margin: 0;
-    width: 100%;
-    height: 100vh;
-    padding: 10px;
-    gap: 0;
-    justify-content: stretch;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "gridHeader"
-        "bannerBebidas"
-        "gridCocteles"
-        "footer";
-    grid-template-rows: 1fr 1fr auto 0.5fr;
+  display: grid;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  gap: 0;
+  justify-content: stretch;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "gridHeader"
+    "bannerBebidas"
+    "gridCocteles"
+    "footer";
+  grid-template-rows: 1fr 1fr auto 0.5fr;
 }
 
 .gridHeader {
-    grid-area: gridHeader;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-        "header header header header"
-        "navBar navBar navBar navBar";
-    grid-template-rows: 2fr 1fr;
+  grid-area: gridHeader;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "header header header header"
+    "navBar navBar navBar navBar";
+  grid-template-rows: 2fr 1fr;
 }
 
 .header {
-    grid-area: header;
-    font-size: 30px;
-    width: 100%;
-    padding: 0 50%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-area: header;
+  font-size: 30px;
+  width: 100%;
+  padding: 0 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header h1 {
-    font-family: 'Lobster', cursive;
-    cursor: pointer;
-    opacity: 1;
+  font-family: "Lobster", cursive;
+  cursor: pointer;
+  opacity: 1;
 }
 
 .navBar {
-    grid-area: navBar;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 80%;
-    align-items: center;
-    font-size: 25px;
+  grid-area: navBar;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  font-size: 25px;
 }
 
 .navBar a {
-    font-family: 'Shrikhand', cursive;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: 0.4s;
-    opacity: 0.5;
+  font-family: "Shrikhand", cursive;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: 0.4s;
+  opacity: 0.5;
 }
 
 .navBar a:visited,
 .navBar a:active,
 .navBar a:link {
-    color: #dff2b0;
+  color: #dff2b0;
 }
 
 .navBar a:hover {
-    border-radius: 10px;
-    padding: 0px 20px;
-    font-size: 30px;
-    opacity: 1;
-    text-shadow: 0px 0px 8px #333;
-    border-bottom: 1px solid #333333a5;
-    border-top: 1px solid #333333a5;
+  border-radius: 10px;
+  padding: 0px 20px;
+  font-size: 30px;
+  opacity: 1;
+  text-shadow: 0px 0px 8px #333;
+  border-bottom: 1px solid #333333a5;
+  border-top: 1px solid #333333a5;
 }
 
 .bannerBebidas {
-    padding-top: 0;
-    background-image: url(../Img/bannerBebidasPra.jpg);
-    background-position: 0;
-    background-size: 70vw 75vh;
-    background-repeat: no-repeat;
-    grid-area: bannerBebidas;
-    display: fixed;
-    margin: 0 auto;
-    width: 60vw;
-    height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 90%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.img-bebidas {
+  width: 600px;
+  height: 400px;
 }
 
 .gridCocteles {
-    grid-area: gridCocteles;
-    width: 90vw;
-    row-gap: 0;
-    grid-template-areas:
-        "tequila"
-        "ron"
-        "whisky"
-        "vodka"
-        "gin"
-        "sinAlcohol";
-    grid-template-columns: 1fr;
+  grid-area: gridCocteles;
+  width: 90vw;
+  row-gap: 0;
+  grid-template-areas:
+    "tequila"
+    "ron"
+    "whisky"
+    "vodka"
+    "gin"
+    "sinAlcohol";
+  grid-template-columns: 1fr;
 }
 
 .gridTequila {
-    grid-area: tequila;
-    margin: 50px;
-    width: 90%;
-    display: grid;
-    row-gap: 0;
-    grid-template-areas:
-        "tequilaSunrise  tequilaSunrise tequila"
-        "nieblaCaribe  nieblaCaribe tequila"
-        "margarita  margarita tequila";
-    grid-template-columns: 2fr 2fr 1.3fr;
-    grid-template-rows: repeat(3, auto);
+  grid-area: tequila;
+  margin: 50px;
+  width: 90%;
+  display: grid;
+  row-gap: 0;
+  grid-template-areas:
+    "tequilaSunrise  tequilaSunrise tequila"
+    "nieblaCaribe  nieblaCaribe tequila"
+    "margarita  margarita tequila";
+  grid-template-columns: 2fr 2fr 1.3fr;
+  grid-template-rows: repeat(3, auto);
 }
 
 .imagenTequila {
-    grid-area: tequila;
-    background-image: url(../img/bannerTequilaFxd.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 20%;
-    background-position: 70vw;
+  grid-area: tequila;
+  background-image: url(../img/bannerTequilaFxd.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 20%;
+  background-position: 70vw;
 }
 
 .tequilaSunrise {
-    grid-area: tequilaSunrise;
+  grid-area: tequilaSunrise;
 }
 
 .nieblaCaribe {
-    grid-area: nieblaCaribe;
+  grid-area: nieblaCaribe;
 }
 
 .margarita {
-    grid-area: margarita;
+  grid-area: margarita;
 }
 
 .tragoTequila {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .tragoTequila ul,
 .tragoTequila ol {
-    margin: 20px 50px;
-    opacity: .6;
+  margin: 20px 50px;
+  opacity: 0.6;
 }
 
 .tragoTequila h2 {
-    margin: 20px auto 0 auto;
-    font-size: 35px;
-    font-family: 'lobster';
-    opacity: .8;
+  margin: 20px auto 0 auto;
+  font-size: 35px;
+  font-family: "lobster";
+  opacity: 0.8;
 }
 
 .tragoTequila h3 {
-    margin: 10px auto 0 auto;
-    opacity: .9;
+  margin: 10px auto 0 auto;
+  opacity: 0.9;
 }
 
-.tragoTequila>p {
-    opacity: .8;
-}
-
-.bannerBebidas img {
-    grid-area: tequila;
-    width: 20px;
-    height: 20px;
-    background-repeat: no-repeat;
+.tragoTequila > p {
+  opacity: 0.8;
 }
 
 .gridRon {
-    grid-area: ron;
-    margin: 50px;
-    width: 90%;
-    display: grid;
-    row-gap: 0;
-    grid-template-areas:
-        "mojito mojito rons"
-        "piñaColada piñaColada rons"
-        "Daiquiri Daiquiri rons";
-    grid-template-columns: 2fr 2fr 1.3fr;
-    grid-template-rows: repeat(3, auto);
+  grid-area: ron;
+  margin: 50px;
+  width: 90%;
+  display: grid;
+  row-gap: 0;
+  grid-template-areas:
+    "mojito mojito rons"
+    "piñaColada piñaColada rons"
+    "Daiquiri Daiquiri rons";
+  grid-template-columns: 2fr 2fr 1.3fr;
+  grid-template-rows: repeat(3, auto);
 }
 
 .imagenRon {
-    grid-area: rons;
-    background-image: url(../img/bannerRonFxd.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 20%;
-    background-position: 72.5vw;
+  grid-area: rons;
+  background-image: url(../img/bannerRonFxd.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 20%;
+  background-position: 72.5vw;
 }
 
 .mojito {
-    grid-area: mojito;
+  grid-area: mojito;
 }
 
 .piñaColada {
-    grid-area: piñaColada;
+  grid-area: piñaColada;
 }
 
 .Daiquiri {
-    grid-area: Daiquiri;
+  grid-area: Daiquiri;
 }
 
-
 .gridWhisky {
-    grid-area: whisky;
-    margin: 50px;
-    width: 90%;
-    display: grid;
-    row-gap: 0;
-    grid-template-areas:
-        "blowJob blowJob whiskys"
-        "manhattan manhattan whiskys";
-    grid-template-columns: 2fr 2fr 1.3fr;
-    grid-template-rows: repeat(2, auto);
+  grid-area: whisky;
+  margin: 50px;
+  width: 90%;
+  display: grid;
+  row-gap: 0;
+  grid-template-areas:
+    "blowJob blowJob whiskys"
+    "manhattan manhattan whiskys";
+  grid-template-columns: 2fr 2fr 1.3fr;
+  grid-template-rows: repeat(2, auto);
 }
 
 .imagenWhisky {
-    grid-area: whiskys;
-    background-image: url(../img/bannerWhiskyFxd.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 20%;
-    background-position: 70.5vw;
+  grid-area: whiskys;
+  background-image: url(../img/bannerWhiskyFxd.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 20%;
+  background-position: 70.5vw;
 }
 
 .blowJob {
-    grid-area: blowJob;
+  grid-area: blowJob;
 }
 
 .manhattan {
-    grid-area: manhattan;
+  grid-area: manhattan;
 }
 
 .gridVodka {
-    grid-area: vodka;
-    margin: 50px;
-    width: 90%;
-    display: grid;
-    row-gap: 0;
-    grid-template-areas:
-        "caipiroska caipiroska vodk"
-        "cosmopolitan cosmopolitan vodk"
-        "SOB SOB vodk";
-    grid-template-columns: 2fr 2fr 1.3fr;
-    grid-template-rows: repeat(3, auto);
+  grid-area: vodka;
+  margin: 50px;
+  width: 90%;
+  display: grid;
+  row-gap: 0;
+  grid-template-areas:
+    "caipiroska caipiroska vodk"
+    "cosmopolitan cosmopolitan vodk"
+    "SOB SOB vodk";
+  grid-template-columns: 2fr 2fr 1.3fr;
+  grid-template-rows: repeat(3, auto);
 }
 
 .imagenVodka {
-    grid-area: vodk;
-    background-image: url(../img/bannerVodkaFxd.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 20%;
-    background-position: 72vw;
+  grid-area: vodk;
+  background-image: url(../img/bannerVodkaFxd.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 20%;
+  background-position: 72vw;
 }
 
 .caipiroska {
-    grid-area: caipiroska;
+  grid-area: caipiroska;
 }
 
 .cosmopolitan {
-    grid-area: cosmopolitan;
+  grid-area: cosmopolitan;
 }
 
 .sexOnTheBeach {
-    grid-area: SOB;
+  grid-area: SOB;
 }
 
-
 .gridGin {
-    grid-area: gin;
-    margin: 50px;
-    width: 90%;
-    display: grid;
-    row-gap: 0;
-    grid-template-areas:
-        "negroni negroni gins"
-        "martini martini gins"
-        "ginTonic ginTonic gins";
-    grid-template-columns: 2fr 2fr 1.3fr;
-    grid-template-rows: repeat(3, auto);
+  grid-area: gin;
+  margin: 50px;
+  width: 90%;
+  display: grid;
+  row-gap: 0;
+  grid-template-areas:
+    "negroni negroni gins"
+    "martini martini gins"
+    "ginTonic ginTonic gins";
+  grid-template-columns: 2fr 2fr 1.3fr;
+  grid-template-rows: repeat(3, auto);
 }
 
 .imagenGin {
-    grid-area: gins;
-    background-image: url(../img/bannerGinFxd.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 20%;
-    background-position: 73.6vw;
+  grid-area: gins;
+  background-image: url(../img/bannerGinFxd.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 20%;
+  background-position: 73.6vw;
 }
 
 .negroni {
-    grid-area: negroni;
+  grid-area: negroni;
 }
 
 .martini {
-    grid-area: martini;
+  grid-area: martini;
 }
 
 .ginTonic {
-    grid-area: ginTonic;
+  grid-area: ginTonic;
 }
 
-
 .gridSinAlcohol {
-    grid-area: sinAlcohol;
-    margin: 50px;
-    width: 90%;
-    display: grid;
-    row-gap: 0;
-    grid-template-areas:
-        "sanFrancisco sanFrancisco sinAlcohols"
-        "sangria sangria sinAlcohols";
-        grid-template-columns: 2fr 2fr 1.3fr;
-    grid-template-rows: repeat(2, auto);
+  grid-area: sinAlcohol;
+  margin: 50px;
+  width: 90%;
+  display: grid;
+  row-gap: 0;
+  grid-template-areas:
+    "sanFrancisco sanFrancisco sinAlcohols"
+    "sangria sangria sinAlcohols";
+  grid-template-columns: 2fr 2fr 1.3fr;
+  grid-template-rows: repeat(2, auto);
 }
 
 .imagenSinAlcohol {
-    grid-area: sinAlcohols;
-    background-image: url(../img/bannerSinAlcoholFxd.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 20%;
-    background-position: 69.5vw;
+  grid-area: sinAlcohols;
+  background-image: url(../img/bannerSinAlcoholFxd.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 20%;
+  background-position: 69.5vw;
 }
 
 .sanFrancisco {
-    grid-area: sanFrancisco;
+  grid-area: sanFrancisco;
 }
 
 .sangria {
-    grid-area: sangria;
+  grid-area: sangria;
 }
 
 /* Footer */
-.gridFooter{
-    grid-area: footer;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.gridFooter {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.gridFooter .social{
-    display: flex;
-    width: 50%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;  
+.gridFooter .social {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.autoria{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 25%;
-    opacity: 0.3;
+.autoria {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 25%;
+  opacity: 0.3;
 }
-.copyright{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 25%;
-    opacity: 0.3;
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 25%;
+  opacity: 0.3;
 }
 .social a img {
-    width: 40px;
-    transition: all 0.4s;
-    opacity: 0.5;
+  width: 40px;
+  transition: all 0.4s;
+  opacity: 0.5;
 }
 .social a img:hover {
-    border-radius: 10px;
-    width: 60px;
-    box-shadow: 0px 0px 8px 4px #333;
-    opacity: 1;
+  border-radius: 10px;
+  width: 60px;
+  box-shadow: 0px 0px 8px 4px #333;
+  opacity: 1;
 }
 
 .borde {
-    opacity: .8;
+  opacity: 0.8;
 }
 
 .borde:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 @media screen and (max-width: 1025px) {
-    .navBar{
-        flex-wrap: wrap;
-    }
-    .enlaceCocteles{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .gridFooter .social{
-        display: flex;
-        margin-top: 10%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;    
-        width: 50%;
-    }
-    .gridFooter .social img {
-        margin: 0 10px;
-    }
+  .navBar {
+    flex-wrap: wrap;
+  }
+  .enlaceCocteles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .gridFooter .social {
+    display: flex;
+    margin-top: 10%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+  }
+  .gridFooter .social img {
+    margin: 0 10px;
+  }
 
-    .autoria, 
-    .copyright{
-        display: none;
-    }
-    
+  .autoria,
+  .copyright {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 767px){
-    .bannerBebidas {
-        background-size: 65vw 55vh;
-        width: 300px;
-        height: 200px;
-    }
-    .header h1 {
-        font-size: 40px;  
-    }
-    .navBar a { 
-        font-size: 20px;  
-    }
-    .enlaceCocteles a{
-        font-size: 20px;
-    }
-    .gridFooter{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: 50px;
-    }
-    .gridFooter{
-        margin-top: 20%;
-    }
+@media screen and (max-width: 769px) {
+  .img-bebidas {
+    width: 380px;
+    height: 250px;
+  }
+  .header h1 {
+    font-size: 40px;
+  }
+  .navBar a {
+    font-size: 20px;
+  }
+  .enlaceCocteles a {
+    font-size: 20px;
+  }
+  .gridFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 50px;
+  }
+  .gridFooter {
+    margin-top: 20%;
+  }
 
-    .gridFooter .social{
-        display: flex;
-        margin-top: 30%;
-        width: 50%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;    
-    }
-    .gridFooter .social img {
-        margin: 0 10px;
-    }
+  .gridFooter .social {
+    display: flex;
+    margin-top: 30%;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .gridFooter .social img {
+    margin: 0 10px;
+  }
 
-    .autoria, 
-    .copyright{
-        display: none;
-    }
+  .autoria,
+  .copyright {
+    display: none;
+  }
 }
 
-@media screen and (max-width:327px){
-    .bannerBebidas {
-        background-image: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;  
-    }
-    #imagenBebidas{
-        width: 350px;
-        height: 300px;
-    }
-        
-    
+@media screen and (max-width: 376px) {
+  .img-bebidas {
+    width: 300px;
+    height: 190px;
+  }
+  #imagenBebidas {
+    width: 350px;
+    height: 300px;
+  }
 
+  header h5 {
+    font-size: 40px;
+    margin: 0 25vw;
+  }
 }
-

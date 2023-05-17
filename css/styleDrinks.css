@@ -109,7 +109,8 @@ html {
 
 .gridCocteles {
   grid-area: gridCocteles;
-  width: 90vw;
+  width: 90%;
+  padding: 30px;
   row-gap: 0;
   grid-template-areas:
     "tequila"

@@ -5,6 +5,7 @@ html {
     background-color: black;
     box-shadow: 0 0 10% 10% black;
     color: #dff2b0;
+    overflow-x: hidden;
 }
 body{
     background-color: black;  
@@ -13,47 +14,50 @@ body{
 #cabeceraPagina .navegacionPagina {
     width: 98%;
     display: flex;
-    font-size: 22.5px;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 80%;
     align-items: center;
+    font-size: 25px;
 }
 header h5 {
     width: 98%;
     font-family: 'Lobster', cursive;
     text-rendering: optimizeSpeed;
-    font-size: 40px;
-    width: 9.375rem;
-    margin: 0.9375rem auto;
-    padding: 0.5vw;
+    font-size: 60px;
+    width: 20vw;
+    margin: auto;
+    padding: 0.3vw;
     cursor: pointer;
     color: #dff2b0;
 }
 .navegacionPagina a {
-    
     font-family: 'Shrikhand', cursive;
     text-decoration: none;
-    margin: 2rem;
-    transition: all 0.4s;
+    padding: 10px 15px;
+    transition: 0.4s;
+    opacity: 0.5;
 }
 
 nav a:link {
     color: #dff2b0;
 }
-
 nav a:visited {
     color: #dff2b0;
 }
-
 nav a:hover {
-    color: rgb(248, 250, 115);
-
+    border-radius: 10px;
+    padding: 0px 20px;
+    font-size: 30px;
+    opacity: 1;
+    text-shadow: 0px 0px 8px #333;
+    border-bottom: 1px solid #333333a5;
+    border-top: 1px solid #333333a5;
 }
-s
 nav a:active {
     color: rgb(235, 203, 97);
 }
-
 .title{
     width: 98%;
     display: flex;
@@ -63,7 +67,7 @@ nav a:active {
     font-family: 'Lobster', cursive;
     margin-left: 60px;
 }
-.title h2{
+.title h2{ 
     margin-right: 15px;
 }
 .title h4{
@@ -77,7 +81,20 @@ nav a:active {
     align-items: center;
     width: 70%;
     margin: auto;
-    box-shadow: 0 5px 10px white;
+    box-shadow: 0 0px 20px #333;
+}
+.str .letras {
+    background-color: #000;
+    color:#dff2b0;
+    border-radius: 5px;
+    transition: all .4s;
+}
+.str .letras:hover{
+    color: #f00b0b;
+}
+
+.str .letras:focus{
+    color: #f00b0b;
 }
 .contenedor{
     width: 98%;
@@ -104,7 +121,8 @@ nav a:active {
 }
 .tarjeta:hover {
     transform: translateY(-10px);
-    box-shadow: 0 5px 10px white;
+    border-color: #dff2b0;
+    box-shadow: 0 0px 15px #333;
   }
 .card-1{
     width: 200px;
@@ -124,9 +142,7 @@ nav a:active {
     text-decoration: none;
     border: none;
 }
-
 /* Modal content */
-
 .modal {
 	display: none;
 	position: fixed;
@@ -140,7 +156,6 @@ nav a:active {
     justify-content: center;
     align-items: center;
 }
-
 .receta {
     display: flex;
     flex-direction: column;
@@ -161,8 +176,7 @@ nav a:active {
     color: #dff2b0;
 }
 .card{
-    margin-top: 20px;
-    
+    margin-top: 20px;  
 }
 .card-body{
     background-color: black;
@@ -187,7 +201,6 @@ nav a:active {
     color: #dff2b0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 .close {
     color: white;
 	float: right;
@@ -195,45 +208,121 @@ nav a:active {
 	font-weight: bold;
     width: 25px;
 }
-
 .close:hover,
 .close:focus {
 	color: #f00b0b;
 	text-decoration: none;
 	cursor: pointer;
 }
-
-
-
-
+/* Footer */
+.gridFooter{
+    grid-area: footer;
+    display: flex;
+    margin-top: 12vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow-y: hidden;
+}
+.gridFooter .social{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;  
+}
+.autoria{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 25%;
+    opacity: 0.5;
+}
+.copyright{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 25%;
+    opacity: 0.5;
+}
+.social a img {
+    width: 40px;
+    transition: all 0.4s;
+    opacity: 0.5;
+}
+.social a img:hover {
+    border-radius: 10px;
+    width: 60px;
+    box-shadow: 0px 0px 8px 4px #333;
+    opacity: 1;
+}
 /* Media screens */
 @media screen and (max-width: 1025px) {
 	.contenedor {
 		padding: 20px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-	}
-   
+	}  
 }
-
 @media screen and (max-width: 965px) {
-	.contenedor {
+    .html {
+        overflow-x: disabled;
+    }
+    header h5 {
+        font-size: 40px;
+        margin: 0 25vw;
+    }
+    .navegacionPagina {
+        flex-wrap: wrap;
+    }
+    .contenedor {
 		padding: 20px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
-   
+    .autoria, .copyright {
+        display: none;
+    }
+    .social a img{
+        margin: 5px;
+    }  
 }
-
 @media screen and (max-width: 679px) {
-	.contenedor {
+	.html {
+        overflow-x: disabled;
+    }
+    header h5 {
+        font-size: 40px;
+        margin: 0 25vw;
+    }
+    .navegacionPagina {
+        flex-wrap: wrap;
+    }
+    .contenedor {
 		padding: 20px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
         margin-right: 10px;
     }
+    .autoria, .copyright {
+        display: none;
+    }
+    .social a img{
+        margin: 5px;
+    }
 }
 @media screen and (max-width: 426px) {
+    .html {
+        overflow-x: disabled;
+    }
+    header h5 {
+        font-size: 40px;
+        margin: 0 25vw;
+    }
+    .navegacionPagina {
+        flex-wrap: wrap;
+    }
     .contenedor {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -266,19 +355,59 @@ nav a:active {
     .table-responsive{
         font-size: 12px;
     }
+    .autoria, .copyright {
+        display: none;
+    }
+    .social a img{
+        margin: 5px;
+    }
 }
 @media screen and (max-width: 380px) {
-	.contenedor {
+	.html {
+        overflow-x: disabled;
+    }
+    header h5 {
+        font-size: 40px;
+        margin: 0 25vw;
+    }
+    .navegacionPagina {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .contenedor {
 		margin-left: 3px;
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 	}
+    .autoria, .copyright {
+        display: none;
+    }
+    .social a img{
+        margin: 5px;
+    }
 }
 @media screen and (max-width: 326px) {
-	.contenedor {
+    .html {
+        overflow-x: none;
+    }
+    header h5 {
+        font-size: 40px;
+        margin: 0 25vw;
+    }
+    .navegacionPagina {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .contenedor {
 		margin-top: 30px;
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
         margin-right: 10px;
 	}
+    .autoria, .copyright {
+        display: none;
+    }
+    .social a img{
+        margin: 5px;
+    }
 }

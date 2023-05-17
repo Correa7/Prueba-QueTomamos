@@ -10,23 +10,6 @@ html {
     color: #dff2b0;
 }
 
-.gridLayout {
-    display: grid;
-    height: 100vh;
-    width: 100%;
-    gap: 0;
-    padding: 0 10px;
-    justify-content: stretch;
-    grid-template-areas:
-        "gridHeader gridHeader"
-        "about about"
-        "contact ubication"
-        "footer footer";
-    grid-template-rows: 1fr auto auto 0.5fr;
-    grid-template-columns: repeat(2, .5fr);
-}
-
-
 .gridHeader {
     grid-area: gridHeader;
     display: grid;
@@ -75,7 +58,7 @@ html {
     font-family: 'Shrikhand', cursive;
     text-decoration: none;
     padding: 10px 15px;
-    transition: 0.4s;
+    transition: all 0.4s;
     opacity: 0.5;
 }
 
@@ -91,13 +74,11 @@ html {
     font-size: 30px;
     opacity: 1;
     text-shadow: 0px 0px 8px #333;
-    border-bottom: 1px solid #333333a5;
-    border-top: 1px solid #333333a5;
 }
 
 #aboutUs {
-    margin: 0.9375rem 6.875rem 0.9375rem 1.875rem;
-    width: 92%;
+    margin: 30px;
+    width: 95%;
     grid-area: about;
     padding: 0.9375rem 3.125rem;
     text-align: center;
@@ -124,15 +105,22 @@ html {
 #aboutUs p:hover {
     opacity: 1;
 }
+.form-map{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 30px;
+}
 
 #contact {
-    margin: 0.9375rem 6.875rem 0.9375rem 1.875rem;
+    margin: 20px;
     margin-top: 30px;
-    grid-area: contact;
     display: flex;
     flex-direction: column;
     padding: 0 1vw 0 0;
-    width: 80%;
+    width:550px;
     font-family: 'Lobster';
 }
 
@@ -153,7 +141,7 @@ html {
 
 .ingresoComentario {
     width: 100%;
-    height: 70px;
+    height: 120px;
     background-color: #000000;
     color: #fff;
     outline: none;
@@ -177,7 +165,6 @@ html {
 }
 
 .boton {
-    padding: 0.5rem 22vw;
     width: 100%;
     margin: 0 auto;
     font-size: 20px;
@@ -205,14 +192,13 @@ html {
 
 
 #ubication {
-    margin: 0.5rem 6.875rem 0 1.875rem;
-    grid-area: ubication;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 3.125rem 0 1.25rem;
     padding: 0 1.3vw 0 0;
     font-family: 'lobster';
+    width:550px;
 }
 
 #ubication h2 {
@@ -227,18 +213,19 @@ html {
     border: 3px solid #222;
     box-shadow: 0px 0px 6px 2px #414040aa;
     border-radius: 15px;
-    height: 79.5%;
+    height: 40%;
+   
 }
 
 .mapa iframe {
     filter: invert(93%);
     border: 1px solid #000;
     box-shadow: 0px 0px 13px 8px #ede9e9d1;
+    width:550px;
 }
 
 .gridFooter {
     margin-top: 3vh;
-    grid-area: footer;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -283,4 +270,166 @@ html {
     width: 60px;
     box-shadow: 0px 0px 8px 4px #333;
     opacity: 1;
+}
+/* Media screen */
+@media screen and (max-width:1025px){
+    #header h1 {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+    .mapa {
+        margin-top: 15px;
+        padding: 3px;
+        height: 40%;
+       
+    }
+    
+    .mapa iframe {
+        width:400px;
+    }
+}
+@media screen and (max-width:769px){
+     
+    .navBar a{
+        width: 1fr;
+    }
+    #aboutUs {
+        margin: 30px;
+        width: 90%;
+    }
+    .mapa {
+        margin-top: 15px;
+        padding: 3px;
+        height: 40%;
+       
+    }
+    
+    .mapa iframe {
+        width:300px;
+    }
+    .gridFooter {
+        width: 95%;
+        height: 5vh;
+        padding: 20px 0px; 
+       
+    }
+    .gridFooter .social img {
+        margin: 0 10px;
+    }
+
+    .autoria, 
+    .copyright{
+        display: none;
+    }
+}
+@media screen and (max-width:426px){
+    #header h1 {
+        font-size: 35px;
+        margin-bottom: 15px;
+        margin-right: 90px;
+    }
+    .navBar{
+        flex-wrap: wrap;
+        width: 100%;
+        align-content:center;
+    }
+    #aboutUs {
+        margin: 20px;
+        width: 90%;
+        padding: 10px;
+  
+    }
+    .form-map{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items: center;
+        width: 350px;
+        margin: 30px;
+    }
+    #contact {
+        margin: 20px;
+        padding: 0px;
+        width:340px;
+    }
+    #ubication {
+        margin: 20px;
+        padding: 0px;
+        width:340px;
+    }
+    .mapa {
+        margin-top: 15px;
+        padding: 3px;
+        height: 30%;
+       
+    }
+    
+    .mapa iframe {
+        width:340px;
+    }
+
+}
+@media screen and (max-width:377px){
+    .form-map{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items: center;
+        width: 340px;
+        margin: 20px;
+    }
+    #contact {
+        margin: 20px;
+        padding: 0px;
+        width:320px;
+    }
+    #ubication {
+        margin: 20px;
+        padding: 0px;
+        width:320px;
+    }
+    .mapa {
+        margin-top: 15px;
+        padding: 3px;
+        height: 30%;
+       
+    }
+    
+    .mapa iframe {
+        width:320px;
+    }
+}
+
+@media screen and (max-width:327px){
+    #aboutUs {
+        margin: 20px;
+    }
+    .form-map{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items: center;
+        width: 330px;
+        margin: 0px;
+    }
+    #contact {
+        margin: 20px;
+        padding: 0px;
+        width:300px;
+    }
+    #ubication {
+        margin: 20px;
+        padding: 0px;
+        width:300px;
+    }
+    .mapa {
+        margin-top: 15px;
+        padding: 3px;
+        height: 30%;
+       
+    }
+    
+    .mapa iframe {
+        width:300px;
+    }
 }

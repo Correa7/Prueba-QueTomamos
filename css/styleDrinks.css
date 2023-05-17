@@ -356,8 +356,8 @@ html {
     grid-area: sangria;
 }
 
-
-.gridFooter {
+/* Footer */
+.gridFooter{
     grid-area: footer;
     display: flex;
     flex-direction: row;
@@ -365,37 +365,32 @@ html {
     align-items: center;
     width: 100%;
 }
-
-.gridFooter .social {
+.gridFooter .social{
     display: flex;
     width: 50%;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center;  
 }
-
-.autoria {
+.autoria{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     width: 25%;
     opacity: 0.3;
 }
-
-.copyright {
+.copyright{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     width: 25%;
     opacity: 0.3;
 }
-
 .social a img {
     width: 40px;
     transition: all 0.4s;
     opacity: 0.5;
 }
-
 .social a img:hover {
     border-radius: 10px;
     width: 60px;
@@ -420,6 +415,22 @@ html {
         flex-direction: row;
         flex-wrap: wrap;
     }
+    .gridFooter .social{
+        display: flex;
+        margin-top: 10%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;    
+        width: 50%;
+    }
+    .gridFooter .social img {
+        margin: 0 10px;
+    }
+
+    .autoria, 
+    .copyright{
+        display: none;
+    }
     
 }
 
@@ -432,13 +443,38 @@ html {
     .header h1 {
         font-size: 40px;  
     }
-    .navBar a {
+    .navBar a { 
         font-size: 20px;  
     }
     .enlaceCocteles a{
         font-size: 20px;
     }
+    .gridFooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 50px;
+    }
+    .gridFooter{
+        margin-top: 20%;
+    }
 
+    .gridFooter .social{
+        display: flex;
+        margin-top: 30%;
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;    
+    }
+    .gridFooter .social img {
+        margin: 0 10px;
+    }
+
+    .autoria, 
+    .copyright{
+        display: none;
+    }
 }
 @media screen and (max-width:327px){
     .bannerBebidas {

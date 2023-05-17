@@ -3,7 +3,7 @@ const productos = [
     id: 08,
     nombre: "Copa para Champagne",
     categoria: "Cristaleria",
-    precio: 40,
+    precio: 40, 
     stock: 20,
     img: "./img/coctailGlassChampagneCupp.jpg",
     description:

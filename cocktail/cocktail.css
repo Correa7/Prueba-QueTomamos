@@ -5,11 +5,11 @@ html {
   background-color: black;
   box-shadow: 0 0 10% 10% black;
   color: #dff2b0;
-  overflow-x: hidden;
 }
 body {
   background-color: black;
 }
+/* navbar */
 #cabeceraPagina .navegacionPagina {
   width: 98%;
   display: flex;
@@ -57,8 +57,9 @@ nav a:hover {
 nav a:active {
   color: rgb(235, 203, 97);
 }
+
+/* content */
 .title {
-  width: 98%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -265,9 +266,6 @@ nav a:active {
   }
 }
 @media screen and (max-width: 965px) {
-  .html {
-    overflow-x: disabled;
-  }
   header h5 {
     font-size: 40px;
     margin: 0 25vw;
@@ -289,13 +287,6 @@ nav a:active {
   }
 }
 @media screen and (max-width: 679px) {
-  .html {
-    overflow-x: disabled;
-  }
-  header h5 {
-    font-size: 40px;
-    margin: 0 25vw;
-  }
   .navegacionPagina {
     flex-wrap: wrap;
   }
@@ -314,16 +305,6 @@ nav a:active {
   }
 }
 @media screen and (max-width: 426px) {
-  .html {
-    overflow-x: disabled;
-  }
-  header h5 {
-    font-size: 40px;
-    margin: 0 25vw;
-  }
-  .navegacionPagina {
-    flex-wrap: wrap;
-  }
   .contenedor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -365,13 +346,6 @@ nav a:active {
   }
 }
 @media screen and (max-width: 380px) {
-  .html {
-    overflow-x: disabled;
-  }
-  header h5 {
-    font-size: 40px;
-    margin: 0 25vw;
-  }
   .navegacionPagina {
     flex-direction: column;
     flex-wrap: wrap;
@@ -388,19 +362,8 @@ nav a:active {
   .social a img {
     margin: 5px;
   }
-}
+} 
 @media screen and (max-width: 326px) {
-  .html {
-    overflow-x: none;
-  }
-  header h5 {
-    font-size: 40px;
-    margin: 0 25vw;
-  }
-  .navegacionPagina {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
   .navegacionPagina a {
     font-size: 18px;
   }

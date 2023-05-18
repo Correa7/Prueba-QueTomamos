@@ -586,18 +586,10 @@ nav a:active {
 }
 
 @media screen and (max-width: 326px) {
-  .html {
-    overflow-x: none;
-  }
-
-  header h5 {
-    font-size: 40px;
-    margin: 0 25vw;
-  }
   .navegacionPagina a {
     font-size: 18px;
   }
-  .contenedor {
+  .contenedor { 
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);

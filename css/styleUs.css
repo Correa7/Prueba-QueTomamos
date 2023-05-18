@@ -105,7 +105,7 @@ nav a:active {
   border: 3px solid #090909;
   box-shadow: 0px 0px 6px 2px #414040aa;
   border-radius: 15px;
-  height: 312px;
+  height: 305px;
   background-color: #dff2b0;
   align-items: center;
 }
@@ -425,7 +425,6 @@ nav a:active {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* width: 100%; */
     padding: 10px;
   }
 
@@ -445,6 +444,6 @@ nav a:active {
   }
 
   .mapa iframe {
-    width: 270px;
+    width: 274px;
   }
 }

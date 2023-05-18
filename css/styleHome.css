@@ -13,56 +13,27 @@ html {
   color: #dff2b0;
 }
 
-.gridContainer {
-  display: grid;
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  padding: 10px;
-  gap: 0;
-  justify-content: stretch;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "gridHeader"
-    "footer";
-  grid-template-rows: 6fr 1fr;
-}
-
-.gridHeader {
-  grid-area: gridHeader;
-  display: grid;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas:
-    "header header header header"
-    "navBar navBar navBar navBar";
-  grid-template-rows: 2fr 1fr;
-}
-
 .header {
-  grid-area: header;
-  font-size: 60px;
-  width: 100%;
+  /* width: 100%; */
   padding: 0 30%;
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
+  /* font-size: 60px; */
 }
-.header h1 {
+.h1 {
   font-family: "Lobster", cursive;
-  cursor: pointer;
   opacity: 1;
+  font-size: 80px;
+  margin-top: 30px;
+  margin-bottom:30px;
+
 }
 .navBar {
-  grid-area: navBar;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
   align-items: center;
   font-size: 45px;
 }
@@ -137,15 +108,7 @@ html {
   opacity: 1;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
-  .gridContainer {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    width: 100vw;
-    height: 100vh;
-  }
-
+@media screen and (max-width: 1450px) {
   .gridHeader {
     display: flex;
     width: 90vw;
@@ -171,6 +134,7 @@ html {
 
   .navBar a {
     width: 1fr;
+    
   }
 
   .gridFooter .social {
@@ -191,27 +155,11 @@ html {
   }
 }
 
-@media only screen and (min-width: 280px) and (max-width: 768px) {
-  .gridContainer {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .gridHeader {
-    display: flex;
-    width: 90vw;
-    height: 70vh;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .header h1 {
+@media screen and (max-width: 769px) {
+  .h1 {
     font-size: 5rem;
     margin: 20px;
-    margin-top: 200px;
+    margin-top: 100px;
     padding-bottom: 3rem;
   }
 
@@ -222,18 +170,11 @@ html {
     height: 50px;
   }
   .navBar {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
     flex-wrap: wrap;
   }
 
   .navBar a {
     width: 1fr;
-  }
-
-  .gridFooter {
-    margin-top: 20%;
   }
 
   .gridFooter .social {
@@ -254,9 +195,6 @@ html {
   }
 }
 @media screen and (max-width: 426px) {
-  .gridHeader {
-    margin-bottom: 20px;
-  }
   .header h1 {
     font-size: 50px;
   }

@@ -368,7 +368,7 @@ nav a:active {
     font-size: 18px;
   }
   .contenedor {
-    margin-top: 30px;
+    margin-top: 30px; 
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin-right: 10px;
